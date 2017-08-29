@@ -3,7 +3,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-}
+    filter:
+      opacity(0.9);
+    -webkit-filter:
+      opacity(0.9);
+  }
 
 .button-300-150.button-active {
     background-image: url('button-300-150-active.png');
@@ -56,4 +60,3 @@
     text-align: center;
     color: white;
 }
-
