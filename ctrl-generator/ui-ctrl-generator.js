@@ -99,7 +99,11 @@ var UICtrlGenerator = (function(ctrl_generator) {
   var printCode = function() {
     var code = 'var airconsole = new AirConsole({orientation: AirConsole.ORIENTATION_LANDSCAPE});' + "\n";
     code += 'CtrlGenerator.setAirConsole(airconsole);' + "\n";
-    code += "CtrlGenerator.generate(" + JSON.stringify(ctrl_config) + ");";
+    code += "CtrlGenerator.generate(" + JSON.stringify(ctrl_config) + ");\n";
+    code += 'function changeHue(playerId) {\n';
+    code += '  var body = document.getElementsByClassName("gamepad_container")[0]\n';
+    code += '  body.style.webkitFilter = "hue-rotate(" + playerId * (390/4) + "deg)"\n';
+    code += '}';
     var output_code = output.replace(/{{CONFIG_CODE}}/, code);
     code_output.val(output_code);
   };
