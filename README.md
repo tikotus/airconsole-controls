@@ -1,3 +1,5 @@
+This fork contains some tweaks to make the controls more modifiable.
+
 # AirConsole Controls
 Here you'll find components to build controllers for [AirConsole](http://www.airconsole.com/).
 
