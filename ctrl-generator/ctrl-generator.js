@@ -257,6 +257,9 @@ var CtrlGenerator = (function() {
 
     if (!params.down) {
       params.down = function() {
+        if (config.label2) {
+          button_text.innerHTML = button_text.innerHTML === config.label ? config.label2 : config.label;
+        }
         sendInputEvent(config.key, true);
       }
     }
